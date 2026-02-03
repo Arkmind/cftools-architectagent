@@ -1,0 +1,64 @@
+
+[authorization]
+  disable_remote_root = false
+  fail2ban_attempts = 5
+  fail2ban_ban_time = 60
+  license_key = "<YOUR_LICENSE_KEY>"
+
+[cloud_controller]
+  keepalive = false
+  keepalive_interval = 60
+
+[config_system]
+  version = "Mw=="
+
+[dayz]
+  dzsa_launcher_update = 0
+  dzsa_launcher_update_enable = false
+  priority_update_interval = 300
+
+[filesystem]
+  agent_dir = "/opt/cftools/architect/agent/AAgentData"
+  backups_dir = "/opt/cftools/architect/agent/AAgentData/backups"
+  cache_dir = "/opt/cftools/architect/agent/AAgentData/cache"
+  certs_dir = "/opt/cftools/architect/agent/AAgentData/certs"
+  database_dir = "/opt/cftools/architect/agent/AAgentData/db"
+  deployments_dir = "/opt/cftools/architect/agent/AAgentData/deployments"
+  log_dir = "/opt/cftools/architect/agent/AAgentData/logs"
+  max_manager_download_size = 30
+  plugins_dir = "/opt/cftools/architect/agent/AAgentData/plugins"
+  python_path = "/usr/bin/python3"
+
+[http_server]
+  address = "0.0.0.0"
+  port = 8090
+  ssl_cert_file = "/opt/cftools/architect/agent/AAgentData/certs/cert.pem"
+  ssl_cert_key_file = "/opt/cftools/architect/agent/AAgentData/certs/cert.key.pem"
+  use_ssl = false
+
+[immutable_deployments]
+  enabled = false
+  mode = ""
+
+[logging]
+  audit_logs_retention = 30
+  verbose = false
+
+[rcon]
+  connection_timeout = 180
+  disable_rcon = false
+  rcon_ip_address = "unset"
+
+[steam_servers]
+  chunk_download_timeout = 60
+  disable_buffered_download = false
+  download_batch_size = 60
+  max_downloads_per_cdn = 0
+  reinclusion_period = 1
+  repopulation_cycle = 24
+  use_http2 = false
+
+[windows]
+  powershell_execution_policy = ""
+  session_username = ""
+  start_server_non_interactive = false

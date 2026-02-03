@@ -1,0 +1,15 @@
+services:
+  architect:
+    build:
+      context: .
+    container_name: architect
+    ports:
+      - "8090:8090"
+      - "2302-2305:2302-2305"
+      - "2302-2305:2302-2305/udp"
+    volumes:
+      - ./config/config.toml:/opt/cftools/architect/agent/config.toml
+      - ./config/root.txt:/opt/cftools/architect/agent/root.txt
+      - ./deployments:/opt/cftools/architect/agent/deployments/
+      - ./config/database:/opt/cftools/architect/agent/db
+    restart: unless-stopped
