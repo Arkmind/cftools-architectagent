@@ -9,7 +9,13 @@ services:
       - "2302-2305:2302-2305/udp"
     volumes:
       - ./config/config.toml:/opt/cftools/architect/agent/config.toml
-      - ./config/root.txt:/opt/cftools/architect/agent/root.txt
-      - ./deployments:/opt/cftools/architect/agent/deployments/
-      - ./config/database:/opt/cftools/architect/agent/db
+      - ./config/root.txt:/opt/cftools/architect/agent/AAgentData/root.txt
+      - ./deployments:/opt/cftools/architect/agent/AAgentData/deployments/
+      - ./config/database:/opt/cftools/architect/agent/AAgentData/db
+
+      - ./agent/applications:/opt/cftools/architect/agent/AAgentData/applications
+      - ./agent/backups:/opt/cftools/architect/agent/AAgentData/backups
+      - ./agent/logs:/opt/cftools/architect/agent/AAgentData/logs
+      - ./agent/plugins:/opt/cftools/architect/agent/AAgentData/plugins
+      - ./agent/certs:/opt/cftools/architect/agent/AAgentData/certs
     restart: unless-stopped
